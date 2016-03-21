@@ -31,7 +31,7 @@ module.exports = function(app){
 			    		var newUser = new models.User;
 				    	newUser.email = email;
 				    	newUser.pass = md5(pass);
-			    		newUser.role = constants.USERTYPE.USER;
+			    		newUser.role = constants.USERTYPE.ADMIN;
 				    	newUser.created_at = new Date().getTime();
 				    	newUser.status = constants.USERSTATUS.ACTIVE;
 				    	newUser.save(function(err){
